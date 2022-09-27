@@ -1,9 +1,10 @@
-# diccionarios: CLAVE:VALOR , desordenados, mutables
+# diccionarios: casa item tiene CLAVE:VALOR , desordenados, mutables
+# dict ={clave_1:valor, clave_2:valor}
 
 #formas de crear un diccionario
-dict_1={'name': 'Nu', 'age' : 36, 'email': 'loquesea@xyz.com'} #creando un diccionario 1
+dict_1={'name': 'María', 'age' : 36, 'email': 'loquesea@whatever.com'} #creando un diccionario 1
 
-dict_2 = dict (name='Nu', age= 36, loc = 'LP') #creando un diccionario 2
+dict_2 = dict (name='María', age= 36, loc = 'MDQ') #creando un diccionario 2
 
 #acceder a los valores por key
 
@@ -50,7 +51,7 @@ for key, value in dict_1.items():   #imprime las parejas key:value
 
 #---
 
-#copying
+#copiando un diccionario
 
 dict_1_cpy= dict_1.copy()
 
