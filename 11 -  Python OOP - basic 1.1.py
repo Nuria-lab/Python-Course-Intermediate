@@ -31,13 +31,13 @@ class Course :    #this class will have the ability to add students to a course.
         return value/len(self.students)
         
 # the students
-s1= Student("Tim", 19,95)
-s2= Student("Bill",19,75)
-s3= Student("Jill",19,60)
+s1= Student("Joan", 25,94)
+s2= Student("Marie",29,76)
+s3= Student("Julia",27,59)
 
 
 # the course
-course = Course("Science",2)
+course = Course("Physics",4)  #max_students=4
 course.add_student(s1)
 course.add_student(s2)
 
