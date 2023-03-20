@@ -26,9 +26,9 @@ import socket
 mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 mysock.connect(('data.pr4e.org', 80))
 
-#cmd= 'GET http://data.pr4e.org/romeo.txt HTTP/1.0'.encode()  #not working at all
+#cmd= 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()  #not working at all
 #cmd= 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()   #not working well
-cmd = 'GET /romeo.txt HTTP/1.0\r\nHost: data.pr4e.org\r\n\r\n'.encode() #working
+cmd = 'GET /romeo.txt HTTP/1.0\r\nHost: data.pr4e.org\r\n\r\n'.encode('utf-8') #working
 
 mysock.send(cmd)
 
@@ -37,6 +37,9 @@ while True:
     data = mysock.recv(512)
     if (len(data) < 1):
         break
-    print(data.decode())
+    print(data.decode('utf-8'))
 
 mysock.close()
+
+
+# another 
